@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Portfolio of Rwittik Dash Adhikary specializing in SAP SD, ANSI X12, SAP IDoc, Cleo Integration Cloud, SQL, REST APIs and AI-powered EDI automation.">
+<meta name="keywords" content="EDI, SAP SD, ANSI X12, SAP IDoc, Integration Engineer, Cleo, SQL, REST API, JSON, AI Portfolio">
+<meta name="author" content="Rwittik Dash Adhikary">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Rwittik Dash Adhikary | SAP EDI Integration Analyst">
+<meta property="og:description" content="SAP EDI Integration Analyst specializing in ANSI X12, SAP IDoc, Cleo Integration Cloud, and AI-powered EDI automation.">
+<meta property="og:type" content="website">
+<title>Rwittik Dash Adhikary | SAP EDI Integration Analyst | EDI Integration Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#07090F;--ink2:#0C1018;--ink3:#111620;--ink4:#161C28;
+  --teal:#00BFA8;--teal2:rgba(0,191,168,.12);--teal3:rgba(0,191,168,.22);
+  --blue:#3B82F6;--blue2:rgba(59,130,246,.1);
+  --amber:#F59E0B;--red:#EF4444;--green:#22C55E;
+  --line:rgba(255,255,255,.07);--line2:rgba(255,255,255,.11);--line3:rgba(255,255,255,.18);
+  --t0:#F1F5F9;--t1:#CBD5E1;--t2:#64748B;--t3:#334155;
+  --mono:'IBM Plex Mono',monospace;--sans:'Space Grotesk',sans-serif;
+  --nav:64px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--ink);color:var(--t0);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ── SIDEBAR ── */
+.sb{position:fixed;top:0;left:0;bottom:0;width:var(--nav);background:var(--ink2);border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;padding:1.25rem 0;z-index:400}
+.sb-logo{font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;color:var(--teal);writing-mode:vertical-rl;transform:rotate(180deg);margin-bottom:auto;padding-bottom:.5rem}
+.sb-nav{display:flex;flex-direction:column;gap:.2rem;margin-bottom:auto}
+.sb-a{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:6px;color:var(--t2);text-decoration:none;transition:all .18s;position:relative}
+.sb-a:hover,.sb-a.on{color:var(--teal);background:var(--teal2)}
+.sb-a .tip{position:absolute;left:calc(100% + 10px);background:var(--ink3);border:1px solid var(--line2);color:var(--t0);font-size:.7rem;padding:.28rem .7rem;border-radius:3px;white-space:nowrap;pointer-events:none;opacity:0;transform:translateX(-5px);transition:all .18s;font-family:var(--sans)}
+.sb-a:hover .tip{opacity:1;transform:none}
+.sb-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* ── MOBILE NAV ── */
+.mnav{display:none;position:fixed;top:0;left:0;right:0;height:54px;background:rgba(7,9,15,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--line);align-items:center;justify-content:space-between;padding:0 1.25rem;z-index:400}
+.m-logo{font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;color:var(--teal)}
+.m-hbg{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem}
+.m-hbg span{display:block;width:22px;height:1.5px;background:var(--t0);transition:all .25s;border-radius:1px}
+.m-hbg.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.m-hbg.open span:nth-child(2){opacity:0}
+.m-hbg.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.m-drawer{display:none;position:fixed;top:54px;left:0;right:0;background:var(--ink2);border-bottom:1px solid var(--line);z-index:399;opacity:0;transform:translateY(-6px);transition:opacity .2s,transform .2s;flex-direction:column;padding:.75rem}
+.m-drawer.open{opacity:1;transform:none}
+.m-drawer a{display:block;padding:.7rem 1rem;color:var(--t2);text-decoration:none;font-size:.875rem;font-weight:500;border-radius:4px;transition:all .15s}
+.m-drawer a:hover{color:var(--teal);background:var(--teal2)}
+
+/* ── MAIN ── */
+main{margin-left:var(--nav)}
+section{padding:5rem 4rem;border-bottom:1px solid var(--line);position:relative}
+.s-eyebrow{font-family:var(--mono);font-size:.62rem;letter-spacing:.25em;color:var(--teal);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
+.s-eyebrow::before{content:'';width:28px;height:1px;background:var(--teal);flex-shrink:0}
+.s-h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;letter-spacing:-.03em;line-height:1.1}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.7rem 1.6rem;border-radius:4px;font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:.03em;cursor:pointer;transition:all .18s;text-decoration:none;border:none;line-height:1}
+.btn-p{background:var(--teal);color:var(--ink)}
+.btn-p:hover{background:#00d4be;transform:translateY(-1px);box-shadow:0 4px 20px rgba(0,191,168,.25)}
+.btn-g{background:transparent;border:1px solid var(--line2);color:var(--t0)}
+.btn-g:hover{border-color:var(--teal3);color:var(--teal)}
+
+/* ════════════════════════════════
+   HERO
+════════════════════════════════ */
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 480px;gap:4rem;align-items:center;padding:5rem 4rem;background:radial-gradient(ellipse 55% 60% at 75% 40%,rgba(0,191,168,.05) 0%,transparent 65%),var(--ink)}
+.hero-left{}
+.h-kicker{font-family:var(--mono);font-size:.65rem;letter-spacing:.25em;color:var(--teal);margin-bottom:1.75rem;display:flex;align-items:center;gap:.6rem}
+.h-kicker::before{content:'';width:28px;height:1px;background:var(--teal)}
+.h-name{font-size:clamp(3rem,5.5vw,5rem);font-weight:700;letter-spacing:-.045em;line-height:.92;margin-bottom:1.5rem}
+.h-name .hl{color:var(--teal)}
+.h-title{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;color:var(--t2);text-transform:uppercase;margin-bottom:1.75rem;padding-left:2px}
+.h-summary{font-size:1rem;color:var(--t1);line-height:1.78;max-width:480px;margin-bottom:2rem}
+.h-summary strong{color:var(--t0);font-weight:600}
+.h-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:2.25rem}
+.pill{font-family:var(--mono);font-size:.65rem;letter-spacing:.06em;padding:.3rem .8rem;border:1px solid var(--line2);border-radius:2px;color:var(--t2);transition:all .18s}
+.pill.p-on{border-color:var(--teal3);color:var(--teal);background:var(--teal2)}
+.h-ctas{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.h-contact{display:flex;flex-wrap:wrap;gap:1.5rem}
+.h-contact-item{display:flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.65rem;color:var(--t2)}
+.h-contact-item svg{width:13px;height:13px;color:var(--teal);flex-shrink:0}
+
+/* ── O2C FLOW — the signature piece ── */
+.o2c-panel{background:var(--ink2);border:1px solid var(--line2);border-radius:8px;overflow:hidden;position:relative}
+.o2c-bar{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;background:var(--ink3);border-bottom:1px solid var(--line)}
+.o2c-dots{display:flex;gap:.35rem}
+.o2c-dot{width:9px;height:9px;border-radius:50%}
+.o2c-title{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--t3);margin:0 auto}
+.o2c-body{padding:1.5rem}
+.o2c-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--t3);text-transform:uppercase;margin-bottom:1.25rem}
+.flow-steps{display:flex;flex-direction:column;gap:0}
+.flow-step{display:flex;align-items:stretch;gap:0;position:relative}
+.flow-left{display:flex;flex-direction:column;align-items:center;width:32px;flex-shrink:0}
+.flow-node{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.55rem;font-weight:600;flex-shrink:0;position:relative;z-index:1;margin-top:6px;transition:all .3s}
+.flow-line{flex:1;width:1px;background:var(--line2);margin:2px 0}
+.flow-content{flex:1;padding:.5rem .75rem 1.1rem;min-width:0}
+.flow-set{font-family:var(--mono);font-size:.75rem;font-weight:600;color:var(--t0);margin-bottom:.15rem}
+.flow-desc{font-family:var(--mono);font-size:.6rem;color:var(--t2);line-height:1.5}
+.flow-dir{font-family:var(--mono);font-size:.55rem;color:var(--t3);margin-top:.2rem;letter-spacing:.06em}
+.flow-step.active .flow-node{box-shadow:0 0 0 4px rgba(0,191,168,.15)}
+.flow-step.active .flow-content .flow-set{color:var(--teal)}
+.o2c-footer{border-top:1px solid var(--line);padding:.65rem 1rem;display:flex;justify-content:space-between;align-items:center}
+.o2c-status{font-family:var(--mono);font-size:.58rem;color:var(--teal);display:flex;align-items:center;gap:.4rem;letter-spacing:.08em}
+.o2c-status::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);animation:pulse 1.5s infinite}
+.o2c-timer{font-family:var(--mono);font-size:.58rem;color:var(--t3)}
+
+/* Stats inline */
+.h-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:5px;overflow:hidden;margin-top:2.5rem;max-width:560px}
+.h-stat{background:var(--ink2);padding:1rem;text-align:center}
+.h-stat-n{font-size:1.6rem;font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--t0)}
+.h-stat-n .u{font-size:1rem;color:var(--teal)}
+.h-stat-l{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;color:var(--t2);margin-top:.3rem;text-transform:uppercase}
+
+/* ════════════════════════════════
+   SKILLS
+════════════════════════════════ */
+#skills{background:var(--ink2)}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3rem 5rem;margin-top:3rem}
+.sg-title{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;color:var(--t3);text-transform:uppercase;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid var(--line)}
+.sk-row{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.sk-name{font-size:.875rem;font-weight:500;min-width:160px;color:var(--t1)}
+.sk-track{flex:1;height:2px;background:var(--line2);border-radius:1px;overflow:hidden;position:relative}
+.sk-fill{height:100%;border-radius:1px;width:0;transition:width 1.4s cubic-bezier(.22,1,.36,1);position:relative}
+.sk-fill::after{content:'';position:absolute;right:-1px;top:50%;transform:translateY(-50%);width:5px;height:5px;border-radius:50%;background:inherit;box-shadow:0 0 6px currentColor;opacity:.8}
+.sk-pct{font-family:var(--mono);font-size:.62rem;color:var(--t3);min-width:28px;text-align:right}
+.sk-badge{font-family:var(--mono);font-size:.55rem;padding:.15rem .45rem;border-radius:2px;margin-left:.5rem;vertical-align:middle}
+.bk-core{background:rgba(0,191,168,.1);color:var(--teal);border:1px solid rgba(0,191,168,.2)}
+.bk-dev{background:var(--blue2);color:var(--blue);border:1px solid rgba(59,130,246,.2)}
+.bk-learn{background:rgba(245,158,11,.08);color:var(--amber);border:1px solid rgba(245,158,11,.18)}
+
+/* Tool matrix */
+.tool-matrix{margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--line)}
+.tm-title{font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;color:var(--t3);text-transform:uppercase;margin-bottom:1.25rem}
+.tm-groups{display:flex;flex-wrap:wrap;gap:2rem}
+.tm-group{}
+.tm-group-name{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:var(--t2);margin-bottom:.5rem;text-transform:uppercase}
+.tm-chips{display:flex;flex-wrap:wrap;gap:.35rem}
+.tm-chip{font-family:var(--mono);font-size:.65rem;padding:.28rem .7rem;border:1px solid var(--line2);border-radius:2px;color:var(--t2);transition:all .18s}
+.tm-chip:hover{border-color:var(--teal3);color:var(--teal);background:var(--teal2)}
+
+/* ════════════════════════════════
+   EXPERIENCE
+════════════════════════════════ */
+#experience{}
+.exp-wrap{margin-top:3rem;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--ink2)}
+.exp-head{padding:2rem 2.5rem;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.exp-co{font-size:1.35rem;font-weight:700;letter-spacing:-.025em;margin-bottom:.3rem}
+.exp-role{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;color:var(--teal);text-transform:uppercase}
+.exp-meta{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem;flex-shrink:0}
+.exp-period{font-family:var(--mono);font-size:.65rem;color:var(--t2);padding:.3rem .8rem;border:1px solid var(--line2);border-radius:2px}
+.exp-loc{font-family:var(--mono);font-size:.62rem;color:var(--t3)}
+.exp-body{padding:2rem 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.exp-sec-title{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--t3);text-transform:uppercase;margin-bottom:1.25rem}
+.exp-list{display:flex;flex-direction:column;gap:.875rem}
+.exp-item{display:flex;align-items:flex-start;gap:.75rem;font-size:.875rem;color:var(--t1);line-height:1.65}
+.exp-item::before{content:'→';font-family:var(--mono);color:var(--teal);flex-shrink:0;font-size:.75rem;margin-top:.1rem}
+.exp-item strong{color:var(--t0);font-weight:600}
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border-radius:4px;overflow:hidden}
+.kpi{background:var(--ink3);padding:1.1rem 1rem}
+.kpi-n{font-size:1.7rem;font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--t0)}
+.kpi-n .ku{font-size:1rem;color:var(--teal)}
+.kpi-l{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;color:var(--t2);margin-top:.35rem;text-transform:uppercase}
+
+/* ════════════════════════════════
+   PROJECT
+════════════════════════════════ */
+#project{background:var(--ink2)}
+.proj-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:4rem;margin-top:3rem;align-items:start}
+.proj-badge{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;color:var(--teal);padding:.28rem .75rem;border:1px solid var(--teal3);border-radius:2px;margin-bottom:1.25rem;text-transform:uppercase}
+.proj-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+.proj-name{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;letter-spacing:-.04em;line-height:1.05;margin-bottom:.5rem}
+.proj-subtitle{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--teal);text-transform:uppercase;margin-bottom:1.25rem}
+.proj-desc{font-size:.9rem;color:var(--t1);line-height:1.8;margin-bottom:2rem}
+.proj-feats{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem}
+.proj-feat{display:flex;align-items:flex-start;gap:.875rem;font-size:.875rem}
+.pf-num{font-family:var(--mono);font-size:.6rem;color:var(--teal);border:1px solid var(--teal3);padding:.15rem .45rem;border-radius:2px;flex-shrink:0;margin-top:.08rem}
+.pf-text{color:var(--t1);line-height:1.6}
+.pf-text strong{color:var(--t0);font-weight:600}
+
+/* Dashboard mockup */
+.dash{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--ink)}
+.dash-bar{background:var(--ink3);border-bottom:1px solid var(--line);padding:.65rem 1rem;display:flex;align-items:center;gap:.4rem}
+.dash-bar-dots{display:flex;gap:.3rem}
+.dash-bar-dot{width:8px;height:8px;border-radius:50%}
+.dash-bar-title{font-family:var(--mono);font-size:.6rem;color:var(--t3);margin:0 auto;letter-spacing:.1em}
+.dash-inner{padding:1.25rem;display:flex;flex-direction:column;gap:1px;background:var(--line)}
+.d-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.d-cell{background:var(--ink2);padding:1.1rem}
+.d-cell-full{background:var(--ink2);padding:1.1rem;grid-column:span 2}
+.dc-label{font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;color:var(--t3);text-transform:uppercase;margin-bottom:.75rem;display:flex;align-items:center;gap:.35rem}
+.dc-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.dc-big{font-size:2rem;font-weight:700;letter-spacing:-.04em;line-height:1}
+.dc-sub{font-family:var(--mono);font-size:.62rem;color:var(--t2);margin-top:.3rem}
+.score-track{height:3px;background:var(--line2);border-radius:2px;margin-top:.875rem;overflow:hidden}
+.score-fill{height:100%;width:0;border-radius:2px;transition:width 1.6s cubic-bezier(.22,1,.36,1)}
+.err-list{display:flex;flex-direction:column;gap:.3rem;margin-top:.5rem}
+.err-i{font-family:var(--mono);font-size:.62rem;color:#FCA5A5;display:flex;align-items:flex-start;gap:.4rem;line-height:1.4}
+.err-i::before{content:'↳';color:var(--t3);flex-shrink:0}
+.rec-list{display:flex;flex-direction:column;gap:.4rem}
+.rec-i{font-family:var(--mono);font-size:.62rem;color:#93C5FD;display:flex;align-items:flex-start;gap:.4rem;line-height:1.5}
+.rec-i::before{content:'→';color:var(--t3);flex-shrink:0}
+.dash-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.dm{background:var(--ink);padding:.875rem;text-align:center}
+.dm-n{font-size:1.2rem;font-weight:700;letter-spacing:-.03em;color:var(--t0)}
+.dm-l{font-family:var(--mono);font-size:.55rem;color:var(--t3);margin-top:.25rem;text-transform:uppercase;letter-spacing:.06em}
+
+/* ════════════════════════════════
+   INTEGRATION FLOW (signature)
+════════════════════════════════ */
+#flow{background:var(--ink)}
+.flow-canvas-wrap{margin-top:3rem;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--ink2);position:relative}
+.flow-canvas-head{background:var(--ink3);border-bottom:1px solid var(--line);padding:.75rem 1.25rem;display:flex;align-items:center;justify-content:space-between}
+.fch-title{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--t2)}
+.fch-live{display:flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:.58rem;color:var(--teal);letter-spacing:.1em}
+.fch-live::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);animation:pulse 1.5s infinite}
+#flowCanvas{display:block;width:100%}
+.flow-legend{display:flex;flex-wrap:wrap;gap:1rem;padding:1rem 1.25rem;border-top:1px solid var(--line)}
+.fl-item{display:flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.6rem;color:var(--t2)}
+.fl-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+/* ════════════════════════════════
+   JOURNEY
+════════════════════════════════ */
+#journey{background:var(--ink2)}
+.journey-wrap{margin-top:3rem;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.jt-head{display:grid;grid-template-columns:90px 1fr 180px 110px;background:var(--ink3);border-bottom:1px solid var(--line);padding:.75rem 1.5rem}
+.jt-lbl{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--t3);text-transform:uppercase}
+.jt-row{display:grid;grid-template-columns:90px 1fr 180px 110px;padding:1.35rem 1.5rem;border-bottom:1px solid var(--line);transition:background .15s;align-items:start;opacity:0;transform:translateX(-10px);transition:opacity .5s,transform .5s,background .15s}
+.jt-row:last-child{border-bottom:none}
+.jt-row:hover{background:var(--ink3)}
+.jt-row.vis{opacity:1;transform:none}
+.jt-yr{font-family:var(--mono);font-size:.72rem;color:var(--teal);font-weight:500;padding-top:.12rem}
+.jt-main{}
+.jt-role{font-size:.95rem;font-weight:600;color:var(--t0);margin-bottom:.2rem}
+.jt-org{font-size:.8rem;color:var(--t2);margin-bottom:.5rem}
+.jt-tags{display:flex;flex-wrap:wrap;gap:.3rem}
+.jt-tag{font-family:var(--mono);font-size:.58rem;padding:.15rem .5rem;border:1px solid var(--line2);border-radius:2px;color:var(--t3)}
+.jt-stack{font-family:var(--mono);font-size:.65rem;color:var(--t2);line-height:1.75}
+.jt-badge{display:inline-flex;align-items:center;gap:.3rem;font-family:var(--mono);font-size:.6rem;padding:.22rem .6rem;border-radius:2px;margin-top:.1rem}
+.jb-now{background:rgba(34,197,94,.08);color:var(--green);border:1px solid rgba(34,197,94,.18)}
+.jb-done{background:rgba(100,116,139,.08);color:var(--t3);border:1px solid rgba(100,116,139,.15)}
+.jb-goal{background:var(--teal2);color:var(--teal);border:1px solid var(--teal3)}
+
+/* ════════════════════════════════
+   CONTACT
+════════════════════════════════ */
+#contact{border-bottom:none}
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;margin-top:3rem;align-items:start}
+.c-headline{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;letter-spacing:-.04em;line-height:1.08;margin-bottom:1.25rem}
+.c-body{font-size:.9rem;color:var(--t2);line-height:1.8;margin-bottom:2rem}
+.c-meta{display:flex;flex-direction:column;gap:.875rem;margin-bottom:2.5rem}
+.c-meta-row{display:flex;align-items:flex-start;gap:1rem}
+.c-meta-key{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:var(--t3);text-transform:uppercase;min-width:90px;padding-top:.15rem;flex-shrink:0}
+.c-meta-val{font-size:.875rem;color:var(--t1);line-height:1.5}
+.c-meta-val strong{color:var(--t0);font-weight:600}
+.cta-cards{display:flex;flex-direction:column;gap:.625rem}
+.cta-card{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.35rem;border:1px solid var(--line2);border-radius:5px;text-decoration:none;color:var(--t0);background:var(--ink2);transition:all .18s}
+.cta-card:hover{border-color:var(--teal3);background:var(--teal2);transform:translateX(3px)}
+.cta-card-left{display:flex;align-items:center;gap:.875rem}
+.cta-card-icon{width:20px;height:20px;color:var(--teal);flex-shrink:0}
+.cta-card-name{font-size:.9rem;font-weight:500}
+.cta-card-sub{font-family:var(--mono);font-size:.6rem;color:var(--t3);margin-top:.1rem}
+.cta-card-arr{font-family:var(--mono);font-size:.75rem;color:var(--t3);transition:all .18s}
+.cta-card:hover .cta-card-arr{color:var(--teal);transform:translateX(2px)}
+
+/* ── FOOTER ── */
+footer{margin-left:var(--nav);padding:1.75rem 4rem;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-copy{font-family:var(--mono);font-size:.6rem;color:var(--t3);letter-spacing:.06em}
+.ft-tags{display:flex;gap:.4rem;flex-wrap:wrap}
+.ft-tag{font-family:var(--mono);font-size:.58rem;padding:.18rem .6rem;border:1px solid var(--line);border-radius:2px;color:var(--t3)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  #hero{grid-template-columns:1fr;gap:3rem}
+  .o2c-panel{display:none}
+  .proj-grid{grid-template-columns:1fr;gap:3rem}
+}
+@media(max-width:768px){
+  .sb{display:none}
+  .mnav{display:flex}
+  .m-drawer{display:flex}
+  main{margin-left:0}
+  footer{margin-left:0;padding:1.5rem}
+  section{padding:4rem 1.5rem}
+  #hero{padding:5.5rem 1.5rem 3rem;grid-template-columns:1fr}
+  .h-name{font-size:2.6rem}
+  .skills-grid{grid-template-columns:1fr;gap:2rem}
+  .exp-body{grid-template-columns:1fr;gap:2rem}
+  .exp-head{flex-direction:column;gap:.75rem}
+  .exp-meta{align-items:flex-start}
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+  .jt-head,.jt-row{grid-template-columns:75px 1fr}
+  .jt-lbl:nth-child(3),.jt-lbl:nth-child(4),.jt-stack,.jt-badge{display:none}
+  .h-stats{grid-template-columns:repeat(2,1fr)}
+  .dash-metrics{grid-template-columns:repeat(2,1fr)}
+  .d-row{grid-template-columns:1fr}
+  .d-cell-full{grid-column:span 1}
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sb">
+  <div class="sb-logo">RDA</div>
+  <div class="sb-nav">
+    <a class="sb-a on" href="#hero"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M3 12L12 3l9 9M5 10v10h5v-6h4v6h5V10"/></svg><span class="tip">Home</span></a>
+    <a class="sb-a" href="#skills"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg><span class="tip">Skills</span></a>
+    <a class="sb-a" href="#experience"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg><span class="tip">Experience</span></a>
+    <a class="sb-a" href="#project"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg><span class="tip">EDI Doctor AI</span></a>
+    <a class="sb-a" href="#flow"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M9.5 17.5L7 16M14.5 17.5L17 16"/></svg><span class="tip">TX Network</span></a>
+    <a class="sb-a" href="#journey"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg><span class="tip">Journey</span></a>
+    <a class="sb-a" href="#contact"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span class="tip">Contact</span></a>
+  </div>
+  <div class="sb-dot"></div>
+</nav>
+
+<!-- MOBILE NAV -->
+<header class="mnav">
+  <div class="m-logo">RWITTIK · RDA.SYS</div>
+  <div class="m-hbg" id="hbg"><span></span><span></span><span></span></div>
+</header>
+<div class="m-drawer" id="drawer">
+  <a href="#hero" onclick="closeDrawer()">Home</a>
+  <a href="#skills" onclick="closeDrawer()">Skills</a>
+  <a href="#experience" onclick="closeDrawer()">Experience</a>
+  <a href="#project" onclick="closeDrawer()">EDI Doctor AI</a>
+  <a href="#flow" onclick="closeDrawer()">TX Network</a>
+  <a href="#journey" onclick="closeDrawer()">Journey</a>
+  <a href="#contact" onclick="closeDrawer()">Contact</a>
+</div>
+
+<main>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="h-kicker">SAP EDI Integration Analyst</div>
+    <h1 class="h-name">Rwittik<br>Dash <span class="hl">Adhikary</span></h1>
+    <div class="h-title">EDI &amp; Integration Support · Teleperformance GBS</div>
+    <p class="h-summary">
+      Quality Analyst with hands-on experience in <strong>EDI-to-SAP integration flows</strong> and
+      SAP SD Order-to-Cash processes. Skilled in <strong>ANSI X12 transaction management</strong>,
+      IDoc structures, Cleo Integration Cloud, and SQL-based validation.
+      Built <strong>EDI Doctor AI</strong> — an AI-powered diagnostic platform for X12 file analysis.
+    </p>
+    <div class="h-pills">
+      <span class="pill p-on">ANSI X12</span>
+      <span class="pill p-on">SAP SD / O2C</span>
+      <span class="pill p-on">IDoc · ORDERS05 · INVOIC02</span>
+      <span class="pill">Dell Boomi</span>
+      <span class="pill">Cleo Integration Cloud</span>
+      <span class="pill">AS2 / SFTP</span>
+      <span class="pill">SQL</span>
+      <span class="pill">REST API · JSON/XML</span>
+    </div>
+    <div class="h-ctas">
+      <a href="https://edi-insight-flow.dashadhikary.workers.dev" target="_blank" rel="noopener noreferrer" class="btn btn-p">Explore EDI Doctor AI →</a>
+      <a href="assets/resume/Rwittik_Dash_Adhikary_SAP_EDI_Integration_Resume.pdf" download class="btn btn-g">Download Resume</a>
+    </div>
+    <div class="h-contact">
+      <div class="h-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Mohali, Punjab, India
+      </div>
+      <div class="h-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.23-1.23a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        +91 8001164172
+      </div>
+      <div class="h-contact-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+        dashadhikary@gmail.com
+      </div>
+    </div>
+    <div class="h-stats">
+      <div class="h-stat"><div class="h-stat-n">850→<span class="u">810</span></div><div class="h-stat-l">Full O2C Cycle</div></div>
+      <div class="h-stat"><div class="h-stat-n">2<span class="u">+</span></div><div class="h-stat-l">Years EDI Support</div></div>
+      <div class="h-stat"><div class="h-stat-n">MCA</div><div class="h-stat-l">Chandigarh Univ.</div></div>
+      <div class="h-stat"><div class="h-stat-n">1</div><div class="h-stat-l">AI Tool Built</div></div>
+    </div>
+  </div>
+
+  <!-- O2C FLOW PANEL -->
+  <div class="o2c-panel">
+    <div class="o2c-bar">
+      <div class="o2c-dots">
+        <div class="o2c-dot" style="background:#FF5F57"></div>
+        <div class="o2c-dot" style="background:#FFBD2E"></div>
+        <div class="o2c-dot" style="background:#28C840"></div>
+      </div>
+      <div class="o2c-title">EDI → SAP · O2C Integration Flow</div>
+    </div>
+    <div class="o2c-body">
+      <div class="o2c-label">Live Transaction Lifecycle</div>
+      <div class="flow-steps" id="flowSteps">
+
+        <div class="flow-step" data-i="0">
+          <div class="flow-left">
+            <div class="flow-node" style="background:rgba(0,191,168,.15);border:1.5px solid var(--teal);color:var(--teal)">EDI</div>
+            <div class="flow-line"></div>
+          </div>
+          <div class="flow-content">
+            <div class="flow-set">850 · Purchase Order</div>
+            <div class="flow-desc">Inbound X12 from Retailer<br>ISA/GS envelope · BEG · PO1 · CTT segments</div>
+            <div class="flow-dir">RETAILER → CLEO INTEGRATION CLOUD</div>
+          </div>
+        </div>
+
+        <div class="flow-step" data-i="1">
+          <div class="flow-left">
+            <div class="flow-node" style="background:rgba(59,130,246,.12);border:1.5px solid rgba(59,130,246,.5);color:var(--blue)">MID</div>
+            <div class="flow-line"></div>
+          </div>
+          <div class="flow-content">
+            <div class="flow-set">X12 → ORDERS05 · IDoc Transform</div>
+            <div class="flow-desc">X12 segment mapping to IDoc fields<br>Dell Boomi middleware · JSON/XML transformation</div>
+            <div class="flow-dir">CLEO → DELL BOOMI → SAP INBOUND</div>
+          </div>
+        </div>
+
+        <div class="flow-step" data-i="2">
+          <div class="flow-left">
+            <div class="flow-node" style="background:rgba(245,158,11,.1);border:1.5px solid rgba(245,158,11,.4);color:var(--amber)">SAP</div>
+            <div class="flow-line"></div>
+          </div>
+          <div class="flow-content">
+            <div class="flow-set">SAP SD · Sales Order Creation</div>
+            <div class="flow-desc">Order-to-Cash process · SO → Delivery → Invoice<br>Data integrity validation · ERP reconciliation</div>
+            <div class="flow-dir">SAP SD O2C WORKFLOW</div>
+          </div>
+        </div>
+
+        <div class="flow-step" data-i="3">
+          <div class="flow-left">
+            <div class="flow-node" style="background:rgba(59,130,246,.12);border:1.5px solid rgba(59,130,246,.5);color:var(--blue)">MID</div>
+            <div class="flow-line"></div>
+          </div>
+          <div class="flow-content">
+            <div class="flow-set">INVOIC02 → 810 · Outbound</div>
+            <div class="flow-desc">SAP outbound IDoc → X12 810 Invoice<br>AS2/SFTP transmission via Cleo</div>
+            <div class="flow-dir">SAP → DELL BOOMI → RETAILER</div>
+          </div>
+        </div>
+
+        <div class="flow-step" data-i="4">
+          <div class="flow-left">
+            <div class="flow-node" style="background:rgba(34,197,94,.1);border:1.5px solid rgba(34,197,94,.35);color:var(--green)">ACK</div>
+          </div>
+          <div class="flow-content">
+            <div class="flow-set">997 · Functional Acknowledgement</div>
+            <div class="flow-desc">Transaction confirmed · 855 PO Ack · 856 ASN<br>End-to-end lifecycle complete</div>
+            <div class="flow-dir">TRANSACTION COMPLETE ✓</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="o2c-footer">
+      <div class="o2c-status" id="o2cStatus">PROCESSING 850 → SAP</div>
+      <div class="o2c-timer" id="o2cTimer">00:00:287ms</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ══ -->
+<section id="skills">
+  <div class="s-eyebrow">Capabilities</div>
+  <div class="s-h2">Technical Skills & Stack</div>
+  <div class="skills-grid" id="skillsGrid"></div>
+  <div class="tool-matrix">
+    <div class="tm-title">Full Technology Matrix</div>
+    <div class="tm-groups" id="tmGroups"></div>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCE ══ -->
+<section id="experience">
+  <div class="s-eyebrow">Work Experience</div>
+  <div class="s-h2">Professional Background</div>
+  <div class="exp-wrap">
+    <div class="exp-head">
+      <div>
+        <div class="exp-co">Teleperformance Global Business Pvt. Ltd.</div>
+        <div class="exp-role">Quality Analyst — EDI &amp; Integration Support</div>
+      </div>
+      <div class="exp-meta">
+        <div class="exp-period">Aug 2023 — Present</div>
+        <div class="exp-loc">Medinipur, West Bengal, India</div>
+      </div>
+    </div>
+    <div class="exp-body">
+      <div>
+        <div class="exp-sec-title">Key Responsibilities</div>
+        <div class="exp-list">
+          <div class="exp-item">Analyzed end-to-end <strong>EDI-to-SAP integration flows</strong> for SAP SD order lifecycles — Inbound 850 through 855 / 856 / 810 — aligning transactions with ERP business workflows</div>
+          <div class="exp-item">Validated <strong>X12 segment mapping logic</strong> against internal ERP structures to ensure high data integrity across customer and item segments</div>
+          <div class="exp-item">Developed expertise in <strong>inbound ORDERS05 and outbound INVOIC02 IDoc</strong> processing flows during EDI-to-ERP transformation analysis</div>
+          <div class="exp-item">Troubleshot EDI transaction failures and integration issues, minimizing disruption to <strong>B2B data exchanges via AS2/SFTP</strong> channels through Cleo Integration Cloud</div>
+          <div class="exp-item">Utilized <strong>SQL</strong> — joins, data validation, reconciliation — to ensure accurate mapping of customer and item segments across integration layers</div>
+          <div class="exp-item">Coordinated with cross-functional technical and business teams to resolve <strong>integration gaps</strong> and improve transaction reliability at scale</div>
+        </div>
+      </div>
+      <div>
+        <div class="exp-sec-title">Key Impact</div>
+        <div class="kpi-grid">
+          <div class="kpi"><div class="kpi-n">850→<span class="ku">810</span></div><div class="kpi-l">Full O2C lifecycle managed</div></div>
+          <div class="kpi"><div class="kpi-n">IDoc</div><div class="kpi-l">ORDERS05 · INVOIC02 flows</div></div>
+          <div class="kpi"><div class="kpi-n">AS2<span class="ku">/</span>SFTP</div><div class="kpi-l">Channel monitoring via Cleo</div></div>
+          <div class="kpi"><div class="kpi-n">SQL</div><div class="kpi-l">Complex validation & reconciliation</div></div>
+        </div>
+        <div style="margin-top:1.5rem">
+          <div class="exp-sec-title">Education</div>
+          <div style="padding:.875rem;background:var(--ink3);border:1px solid var(--line);border-radius:4px">
+            <div style="font-size:.9rem;font-weight:600;color:var(--t0);margin-bottom:.2rem">Master of Computer Applications (MCA)</div>
+            <div style="font-family:var(--mono);font-size:.65rem;color:var(--teal)">Chandigarh University · 2023</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECT ══ -->
+<section id="project">
+  <div class="s-eyebrow">Featured Project</div>
+  <div class="proj-grid">
+    <div>
+      <div class="proj-badge">Personal Portfolio Project · Live</div>
+      <h2 class="proj-name">EDI Doctor</h2>
+      <div class="proj-subtitle">EDI Transaction Validation &amp; Troubleshooting Platform</div>
+      <p class="proj-desc">
+        A web-based EDI analysis platform built from first-hand operations experience — capable of reviewing ANSI X12 transactions including 850, 855, 856, 810, and 997. Validates EDI structure, identifies segment-level issues, and provides AI-assisted diagnostics to accelerate real-world troubleshooting.
+      </p>
+      <div class="proj-feats">
+        <div class="proj-feat"><span class="pf-num">01</span><div class="pf-text"><strong>Custom X12 Parser</strong> — Envelope validation for ISA, GS, and ST structures with mandatory segment and business rule checks</div></div>
+        <div class="proj-feat"><span class="pf-num">02</span><div class="pf-text"><strong>AI-Assisted Diagnostics</strong> — Explains EDI errors, missing segments, invalid values, and transaction inconsistencies in plain language</div></div>
+        <div class="proj-feat"><span class="pf-num">03</span><div class="pf-text"><strong>Full TX Set Coverage</strong> — 850 PO, 855 ACK, 856 ASN, 810 Invoice, 997 Functional Acknowledgement validated end-to-end</div></div>
+        <div class="proj-feat"><span class="pf-num">04</span><div class="pf-text"><strong>SAP IDoc Simulation</strong> — SAP SD and IDoc validation concepts applied to simulate EDI-to-ERP transaction scenarios</div></div>
+        <div class="proj-feat"><span class="pf-num">05</span><div class="pf-text"><strong>JSON API Integration</strong> — REST API support enabling future connectivity with ERP, EDI, and middleware platforms</div></div>
+        <div class="proj-feat"><span class="pf-num">06</span><div class="pf-text"><strong>SQL Reconciliation</strong> — Transaction accuracy verification and error tracking across integration data layers</div></div>
+      </div>
+      <div style="margin-bottom:1.25rem;padding:.875rem;background:var(--ink3);border:1px solid var(--line);border-radius:4px">
+        <div style="font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--t3);text-transform:uppercase;margin-bottom:.4rem">Technologies</div>
+        <div style="font-family:var(--mono);font-size:.67rem;color:var(--t2);line-height:1.75">ANSI X12 &nbsp;·&nbsp; SAP SD &nbsp;·&nbsp; SAP IDoc &nbsp;·&nbsp; SQL &nbsp;·&nbsp; JSON &nbsp;·&nbsp; REST APIs &nbsp;·&nbsp; Cleo Concepts &nbsp;·&nbsp; EDI Validation &nbsp;·&nbsp; AI-Assisted Analysis</div>
+      </div>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+        <a href="https://edi-insight-flow.dashadhikary.workers.dev" target="_blank" rel="noopener noreferrer" class="btn btn-p">Explore EDI Doctor AI →</a>
+        <a href="https://github.com/Rwittik" target="_blank" rel="noopener noreferrer" class="btn btn-g">GitHub Repository →</a>
+      </div>
+    </div>
+    <div class="dash">
+      <div class="dash-bar">
+        <div class="dash-bar-dots">
+          <div class="dash-bar-dot" style="background:#FF5F57"></div>
+          <div class="dash-bar-dot" style="background:#FFBD2E"></div>
+          <div class="dash-bar-dot" style="background:#28C840"></div>
+        </div>
+        <div class="dash-bar-title">EDI DOCTOR — 850_PO_SAMPLE.edi</div>
+      </div>
+      <div class="dash-inner">
+        <div class="d-row">
+          <div class="d-cell">
+            <div class="dc-label"><div class="dc-dot" style="background:var(--green)"></div>Validation Score</div>
+            <div class="dc-big" style="color:var(--green)">92<span style="font-size:1.1rem;color:var(--t2)">%</span></div>
+            <div class="dc-sub">850 Purchase Order · 14 segments parsed</div>
+            <div class="score-track"><div class="score-fill" id="sf" style="background:var(--green)"></div></div>
+          </div>
+          <div class="d-cell">
+            <div class="dc-label"><div class="dc-dot" style="background:var(--red)"></div>Detected Issues</div>
+            <div class="dc-big" style="color:var(--red)">5</div>
+            <div class="err-list">
+              <div class="err-i">ISA12: Control version missing</div>
+              <div class="err-i">N1-03: Qualifier 92 — unknown</div>
+              <div class="err-i">PO1-02: Qty exceeds partner limit</div>
+              <div class="err-i">CTT-01: Segment count mismatch</div>
+              <div class="err-i">SE-02: Control number conflict</div>
+            </div>
+          </div>
+        </div>
+        <div class="d-cell-full" style="background:var(--ink2)">
+          <div class="dc-label"><div class="dc-dot" style="background:var(--blue)"></div>AI Recommendations</div>
+          <div class="rec-list">
+            <div class="rec-i">Set ISA12 to 00401 per trading partner version agreement</div>
+            <div class="rec-i">Replace N1-03 qualifier 92 with 91 (Assigned by seller) — VICS standard</div>
+            <div class="rec-i">PO1-02 max qty is 40 per SLA — split into separate line items</div>
+          </div>
+        </div>
+      </div>
+      <div class="dash-metrics">
+        <div class="dm"><div class="dm-n">99.9%</div><div class="dm-l">Accuracy</div></div>
+        <div class="dm"><div class="dm-n">&lt;500ms</div><div class="dm-l">Processing</div></div>
+        <div class="dm"><div class="dm-n">X12</div><div class="dm-l">004010 Standard</div></div>
+        <div class="dm"><div class="dm-n">24/7</div><div class="dm-l">Available</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FLOW CANVAS ══ -->
+<section id="flow">
+  <div class="s-eyebrow">Live Visualization</div>
+  <div class="s-h2">Trading Partner Network</div>
+  <p style="color:var(--t2);font-size:.9rem;margin-top:.5rem;max-width:560px;line-height:1.7">Real-time simulation of EDI transaction flows across the enterprise supply chain — each packet is a live X12 document exchange matching real operational flows.</p>
+  <div class="flow-canvas-wrap">
+    <div class="flow-canvas-head">
+      <div class="fch-title">EDI TRANSACTION MONITOR · LIVE</div>
+      <div class="fch-live">ACTIVE</div>
+    </div>
+    <canvas id="flowCanvas" height="400"></canvas>
+    <div class="flow-legend">
+      <div class="fl-item"><div class="fl-dot" style="background:#00BFA8"></div>850 Purchase Order</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#7C85D0"></div>855 Acknowledgement</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#5CB8A0"></div>856 Ship Notice / ASN</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#D0A55C"></div>810 Invoice</div>
+      <div class="fl-item"><div class="fl-dot" style="background:#B07070"></div>997 Functional ACK</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ JOURNEY ══ -->
+<section id="journey">
+  <div class="s-eyebrow">Career Path</div>
+  <div class="s-h2">Professional Timeline</div>
+  <div class="journey-wrap">
+    <div class="jt-head">
+      <div class="jt-lbl">Year</div>
+      <div class="jt-lbl">Role &amp; Scope</div>
+      <div class="jt-lbl">Stack</div>
+      <div class="jt-lbl">Status</div>
+    </div>
+    <div id="jRows"></div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="s-eyebrow">Get in Touch</div>
+  <div class="contact-grid">
+    <div>
+      <h2 class="c-headline">Open to EDI &amp;<br>SAP Integration Roles</h2>
+      <p class="c-body">
+        Actively seeking positions as an EDI Analyst, SAP EDI Integration Consultant, or Integration Support Specialist.
+        I bring real operational depth in X12 transactions and SAP SD O2C flows, combined with the initiative to build AI tooling that solves real integration problems.
+      </p>
+      <div class="c-meta">
+        <div class="c-meta-row">
+          <span class="c-meta-key">Target</span>
+          <span class="c-meta-val"><strong>EDI Analyst · SAP EDI Integration Consultant · Integration Support</strong></span>
+        </div>
+        <div class="c-meta-row">
+          <span class="c-meta-key">Location</span>
+          <span class="c-meta-val">Medinipur, West Bengal, India · Open to Relocation &amp; Remote</span>
+        </div>
+        <div class="c-meta-row">
+          <span class="c-meta-key">Education</span>
+          <span class="c-meta-val">MCA — Chandigarh University, 2023</span>
+        </div>
+        <div class="c-meta-row">
+          <span class="c-meta-key">Available</span>
+          <span class="c-meta-val" style="color:var(--green);font-weight:600">Immediately available</span>
+        </div>
+      </div>
+    </div>
+    <div class="cta-cards">
+      <a href="https://linkedin.com/in/rwittik-dash-adhikary" target="_blank" rel="noopener noreferrer" class="cta-card">
+        <div class="cta-card-left">
+          <svg class="cta-card-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <div><div class="cta-card-name">LinkedIn</div><div class="cta-card-sub">linkedin.com/in/rwittik-dash-adhikary</div></div>
+        </div>
+        <div class="cta-card-arr">→</div>
+      </a>
+      <a href="https://github.com/Rwittik" target="_blank" rel="noopener noreferrer" class="cta-card">
+        <div class="cta-card-left">
+          <svg class="cta-card-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          <div><div class="cta-card-name">GitHub Repository</div><div class="cta-card-sub">github.com/Rwittik — EDI Doctor AI</div></div>
+        </div>
+        <div class="cta-card-arr">→</div>
+      </a>
+      <a href="https://edi-insight-flow.dashadhikary.workers.dev" target="_blank" rel="noopener noreferrer" class="cta-card">
+        <div class="cta-card-left">
+          <svg class="cta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          <div><div class="cta-card-name">Live EDI Doctor AI</div><div class="cta-card-sub">edi-insight-flow.dashadhikary.workers.dev</div></div>
+        </div>
+        <div class="cta-card-arr">→</div>
+      </a>
+      <a href="assets/resume/Rwittik_Dash_Adhikary_SAP_EDI_Integration_Resume.pdf" download class="cta-card">
+        <div class="cta-card-left">
+          <svg class="cta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <div><div class="cta-card-name">Download Resume</div><div class="cta-card-sub">SAP EDI Integration Analyst — PDF</div></div>
+        </div>
+        <div class="cta-card-arr">↓</div>
+      </a>
+      <a href="mailto:dashadhikary@gmail.com" class="cta-card">
+        <div class="cta-card-left">
+          <svg class="cta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          <div><div class="cta-card-name">Email</div><div class="cta-card-sub">dashadhikary@gmail.com</div></div>
+        </div>
+        <div class="cta-card-arr">→</div>
+      </a>
+      <a href="tel:+918001164172" class="cta-card">
+        <div class="cta-card-left">
+          <svg class="cta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <div><div class="cta-card-name">Phone</div><div class="cta-card-sub">+91 8001164172</div></div>
+        </div>
+        <div class="cta-card-arr">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="ft-copy">© 2026 Rwittik Dash Adhikary · SAP EDI Integration Analyst · EDI Integration Engineer · AI Product Builder</div>
+  <div class="ft-tags">
+    <div class="ft-tag">ANSI X12</div><div class="ft-tag">SAP SD</div><div class="ft-tag">IDoc</div>
+    <div class="ft-tag">Dell Boomi</div><div class="ft-tag">Cleo Integration Cloud</div>
+    <div class="ft-tag">AS2/SFTP</div><div class="ft-tag">SQL</div><div class="ft-tag">REST API</div>
+  </div>
+</footer>
+
+<script>
+// ── MOBILE DRAWER ──
+const hbg=document.getElementById('hbg'),drawer=document.getElementById('drawer');
+hbg.addEventListener('click',()=>{hbg.classList.toggle('open');drawer.classList.toggle('open')});
+function closeDrawer(){hbg.classList.remove('open');drawer.classList.remove('open')}
+
+// ── SIDEBAR ACTIVE ──
+const secs=document.querySelectorAll('section[id]'),sbs=document.querySelectorAll('.sb-a');
+new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){sbs.forEach(a=>a.classList.remove('on'));const l=document.querySelector(`.sb-a[href="#${e.target.id}"]`);if(l)l.classList.add('on');}});
+},{threshold:0.35}).observe(document.documentElement);
+secs.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){sbs.forEach(a=>a.classList.remove('on'));const l=document.querySelector(`.sb-a[href="#${s.id}"]`);if(l)l.classList.add('on');}});
+},{threshold:0.35}).observe(s));
+
+// ── O2C FLOW ANIMATION ──
+(()=>{
+  const steps=document.querySelectorAll('.flow-step');
+  const labels=['PROCESSING 850 → MIDDLEWARE','TRANSFORMING X12 → ORDERS05','SAP SD · CREATING SALES ORDER','OUTBOUND INVOIC02 → 810','TRANSACTION COMPLETE ✓'];
+  const status=document.getElementById('o2cStatus');
+  const timer=document.getElementById('o2cTimer');
+  let cur=0;
+  function advance(){
+    steps.forEach(s=>s.classList.remove('active'));
+    steps[cur].classList.add('active');
+    if(status) status.textContent=labels[cur];
+    if(timer){
+      const ms=Math.floor(Math.random()*400+100);
+      timer.textContent=`00:00:${ms}ms`;
+    }
+    cur=(cur+1)%steps.length;
+  }
+  advance();
+  setInterval(advance,2200);
+})();
+
+// ── SKILLS ──
+(()=>{
+  const groups=[
+    {title:'EDI & Integration',col:'var(--teal)',badge:'bk-core',items:[
+      {n:'ANSI X12 Transactions',pct:90},{n:'EDI-to-SAP Integration',pct:88},
+      {n:'Cleo Integration Cloud',pct:85},{n:'AS2 / SFTP Monitoring',pct:84},
+      {n:'X12 Segment Mapping',pct:88},{n:'Integration Troubleshooting',pct:87},
+    ]},
+    {title:'SAP & ERP',col:'var(--amber)',badge:'bk-learn',items:[
+      {n:'SAP SD · O2C Concepts',pct:68},{n:'IDoc Basics · ORDERS05',pct:65},
+      {n:'INVOIC02 Outbound',pct:63},{n:'EDI-to-ERP Transformation',pct:70},
+    ]},
+    {title:'Middleware & Integration Tools',col:'var(--blue)',badge:'bk-dev',items:[
+      {n:'Dell Boomi',pct:60},{n:'REST APIs',pct:72},
+      {n:'JSON / XML Transformation',pct:74},{n:'Data Mapping Logic',pct:78},
+    ]},
+    {title:'Technical & Data',col:'#A78BFA',badge:'bk-dev',items:[
+      {n:'SQL — Joins & Validation',pct:78},{n:'Data Reconciliation',pct:80},
+      {n:'End-to-End Workflow Analysis',pct:85},{n:'Integration QA & Testing',pct:82},
+    ]},
+  ];
+
+  const grid=document.getElementById('skillsGrid');
+  groups.forEach(g=>{
+    const div=document.createElement('div');
+    div.innerHTML=`<div class="sg-title">${g.title}</div>${g.items.map(sk=>`
+      <div class="sk-row">
+        <div class="sk-name">${sk.n}</div>
+        <div class="sk-track"><div class="sk-fill" data-pct="${sk.pct}" style="background:${g.col}"></div></div>
+        <div class="sk-pct">${sk.pct}%</div>
+      </div>`).join('')}`;
+    grid.appendChild(div);
+  });
+
+  const matrix=[
+    {g:'EDI Standards',chips:['ANSI X12','850 PO','855 ACK','856 ASN','810 Invoice','997 FA','ISA/GS Envelope']},
+    {g:'SAP',chips:['SAP SD','O2C Process','IDoc','ORDERS05','INVOIC02','ERP Integration']},
+    {g:'Middleware',chips:['Dell Boomi','Cleo Integration Cloud','AS2','SFTP','REST API']},
+    {g:'Data & Dev',chips:['SQL','JSON','XML','Data Mapping','Data Validation','Git']},
+  ];
+  const tmg=document.getElementById('tmGroups');
+  matrix.forEach(m=>{
+    tmg.innerHTML+=`<div class="tm-group"><div class="tm-group-name">${m.g}</div><div class="tm-chips">${m.chips.map(c=>`<div class="tm-chip">${c}</div>`).join('')}</div></div>`;
+  });
+
+  new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting) document.querySelectorAll('.sk-fill').forEach(f=>setTimeout(()=>f.style.width=f.dataset.pct+'%',100));});
+  },{threshold:0.15}).observe(document.getElementById('skills'));
+})();
+
+// ── SCORE BAR ──
+new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){const sf=document.getElementById('sf');if(sf)setTimeout(()=>sf.style.width='92%',400);}});
+},{threshold:0.2}).observe(document.getElementById('project'));
+
+// ── JOURNEY TABLE ──
+(()=>{
+  const rows=[
+    {yr:'2023',role:'Quality Analyst — EDI & Integration Support',org:'Teleperformance Global Business Pvt. Ltd.',tags:['ANSI X12','SAP SD O2C','IDoc','Cleo','SQL'],stack:'X12 · Cleo IC\nSQL · AS2/SFTP',badge:'jb-now',label:'Active'},
+    {yr:'2023',role:'EDI to SAP Integration Simulation',org:'Personal Project',tags:['850→ORDERS05','X12-to-IDoc','Dell Boomi','JSON/XML'],stack:'Dell Boomi\nJSON/XML · SAP',badge:'jb-now',label:'Built'},
+    {yr:'2023',role:'MCA Graduate',org:'Chandigarh University',tags:['Computer Applications','Software Engineering'],stack:'Academic\nFoundation',badge:'jb-done',label:'Completed'},
+    {yr:'2025+',role:'EDI Analyst / SAP Integration Consultant',org:'Target Role',tags:['SAP Integration','B2B EDI','Middleware','IDoc'],stack:'SAP SD · IDoc\nDell Boomi · X12',badge:'jb-goal',label:'Target'},
+  ];
+  const wrap=document.getElementById('jRows');
+  rows.forEach((r,i)=>{
+    const el=document.createElement('div');el.className='jt-row';
+    el.style.transitionDelay=i*.1+'s';
+    el.innerHTML=`<div class="jt-yr">${r.yr}</div><div class="jt-main"><div class="jt-role">${r.role}</div><div class="jt-org">${r.org}</div><div class="jt-tags">${r.tags.map(t=>`<span class="jt-tag">${t}</span>`).join('')}</div></div><div class="jt-stack">${r.stack}</div><div><span class="jt-badge ${r.badge}">${r.label}</span></div>`;
+    wrap.appendChild(el);
+  });
+  new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting) e.target.querySelectorAll('.jt-row').forEach((r,i)=>setTimeout(()=>r.classList.add('vis'),i*90));});
+  },{threshold:0.1}).observe(document.getElementById('journey'));
+})();
+
+// ── NETWORK CANVAS ──
+(()=>{
+  const cv=document.getElementById('flowCanvas');if(!cv)return;
+  const ctx=cv.getContext('2d');let W,H,t=0,pkts=[];
+  function resize(){W=cv.width=cv.offsetWidth;H=cv.height;}
+  const N=[
+    {l:'Retailer',   x:.13,y:.50,c:'#00BFA8'},
+    {l:'Distributor',x:.35,y:.22,c:'#7C85D0'},
+    {l:'Warehouse',  x:.58,y:.22,c:'#5CB8A0'},
+    {l:'Carrier',    x:.35,y:.78,c:'#D0A55C'},
+    {l:'Customer',   x:.82,y:.50,c:'#B07070'},
+    {l:'Supplier',   x:.58,y:.78,c:'#7CACC0'},
+  ];
+  const E=[[0,1],[1,2],[2,4],[1,3],[3,5],[1,4],[0,4],[5,2]];
+  const PC=['#00BFA8','#7C85D0','#5CB8A0','#D0A55C','#B07070'];
+  const PS=['850','855','856','810','997'];
+  function spawn(){const e=E[Math.floor(Math.random()*E.length)];pkts.push({fi:e[0],ti:e[1],p:0,c:PC[Math.floor(Math.random()*PC.length)],s:PS[Math.floor(Math.random()*PS.length)],trail:[],sp:.006+Math.random()*.004});}
+  setInterval(spawn,650);for(let i=0;i<5;i++)setTimeout(spawn,i*160);
+  const gp=n=>({x:n.x*W,y:n.y*H});
+  function draw(){
+    ctx.clearRect(0,0,W,H);t+=.01;
+    // grid
+    ctx.strokeStyle='rgba(255,255,255,.03)';ctx.lineWidth=.5;
+    for(let x=0;x<W;x+=55){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+    for(let y=0;y<H;y+=55){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+    // edges
+    E.forEach(([a,b])=>{const p1=gp(N[a]),p2=gp(N[b]);ctx.beginPath();ctx.moveTo(p1.x,p1.y);ctx.lineTo(p2.x,p2.y);ctx.strokeStyle='rgba(255,255,255,.055)';ctx.lineWidth=.8;ctx.setLineDash([4,10]);ctx.stroke();ctx.setLineDash([]);});
+    // packets
+    pkts=pkts.filter(p=>p.p<1);
+    pkts.forEach(pk=>{
+      pk.p+=pk.sp;
+      const f=gp(N[pk.fi]),to=gp(N[pk.ti]),x=f.x+(to.x-f.x)*pk.p,y=f.y+(to.y-f.y)*pk.p;
+      pk.trail.push({x,y});if(pk.trail.length>20)pk.trail.shift();
+      pk.trail.forEach((tr,i)=>{const a=i/pk.trail.length;ctx.beginPath();ctx.arc(tr.x,tr.y,2.2*a,0,Math.PI*2);ctx.fillStyle=pk.c+Math.floor(a*150).toString(16).padStart(2,'0');ctx.fill();});
+      ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);ctx.fillStyle=pk.c;ctx.fill();
+      if(pk.p>.3&&pk.p<.7){ctx.fillStyle='rgba(241,245,249,.6)';ctx.font='bold 7.5px IBM Plex Mono';ctx.textAlign='center';ctx.fillText(pk.s,x,y-8);}
+    });
+    // nodes
+    N.forEach((n,i)=>{
+      const {x,y}=gp(n),pulse=1+Math.sin(t*1.3+i)*.055;
+      const ng=ctx.createRadialGradient(x,y,3,x,y,40);ng.addColorStop(0,n.c+'18');ng.addColorStop(1,'transparent');
+      ctx.beginPath();ctx.arc(x,y,40,0,Math.PI*2);ctx.fillStyle=ng;ctx.fill();
+      ctx.beginPath();ctx.arc(x,y,18*pulse,0,Math.PI*2);ctx.strokeStyle=n.c+'28';ctx.lineWidth=1;ctx.stroke();
+      ctx.beginPath();ctx.arc(x,y,12,0,Math.PI*2);
+      const cg=ctx.createRadialGradient(x-3,y-3,1,x,y,12);cg.addColorStop(0,n.c+'30');cg.addColorStop(1,n.c+'0a');
+      ctx.fillStyle=cg;ctx.fill();ctx.strokeStyle=n.c+'99';ctx.lineWidth=1.5;ctx.stroke();
+      ctx.fillStyle='rgba(241,245,249,.88)';ctx.font='bold 9px Space Grotesk';ctx.textAlign='center';ctx.fillText(n.l,x,y+3.5);
+    });
+    requestAnimationFrame(draw);
+  }
+  resize();window.addEventListener('resize',resize);draw();
+})();
+</script>
+</body>
+</html>
